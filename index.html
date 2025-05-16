@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dog Breed Viewer</title>
+  <style>
+    body {
+      background-color: #d5bfbf;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 50px;
+    }
+
+    h1 {
+      color: #333;
+    }
+
+    .dog-button {
+      margin: 10px;
+      padding: 12px 24px;
+      font-size: 16px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      color: white;
+    }
+
+    .btn-cavalier { background-color: #c77dff; }
+    .btn-doberman { background-color: #ff6b6b; }
+    .btn-husky    { background-color: #38bdf8; }
+
+    #images {
+      margin-top: 30px;
+      max-width: 90%;
+      height: auto;
+      display: none;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Select a Dog Breed</h1>
+
+<button class="dog-button btn-cavalier" onclick="showImage('cavalier')">Cavalier Spaniel</button>
+<button class="dog-button btn-doberman" onclick="showImage('doberman')">Doberman</button>
+<button class="dog-button btn-husky" onclick="showImage('husky')">Husky</button>
+
+
+  <div>
+    <img id="images" src="" alt="Selected Dog Breed">
+  </div>
+
+  <script>
+    function showImage(breed) {
+  const image = document.getElementById("images");
+  const images = {
+    cavalier: "dog-8268972_1920.jpg",
+    doberman: "doberman-893931_1920.jpg",
+    husky: "winter-7839076_1920.jpg"
+  };
+
+  image.src = images[breed];
+  image.style.display = "block";
+}
+
+
+  
+  </script>
+
+</body>
+</html>
+
+
